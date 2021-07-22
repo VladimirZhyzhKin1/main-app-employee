@@ -12,12 +12,24 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employee_Id;
-    private String first_Name;
-    private String last_name;
-    private int department_id;
-    private String job_title;
-    private Gender gender;
-    private Timestamp date_of_birth;
+    private Long employeeId;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
+    private String lastName;
+
+    @Column(name = "department_id")
+    private int departmentId;
+
+    @Column(name = "job_title")
+    private String jobTitle;
+
+   // @Column(name = "gender")
+    //private Gender gender;
+
+    @Column(name = "date_of_birth")
+    private Timestamp dateOfBirth;
 
 }

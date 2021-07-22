@@ -1,4 +1,4 @@
 package com.example.mainappemployee.dao;
 
-public class EmployeeDao {
+public class EmployeeDAOImpl {
 }
