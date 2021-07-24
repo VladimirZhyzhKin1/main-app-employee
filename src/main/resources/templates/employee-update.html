@@ -1,10 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Update Employee</title>
 </head>
 <body>
+
+<form action="#" th:action="@{/employee-update}" th:object="${employee}" method="post">
+    <label for="employeeId">Id</label>
+    <input readonly type="number" th:field="*{employeeId}" id="employeeId" placeholder="Id">
+
+    <label for="firstName">First name</label>
+    <input type="text" th:field="*{firstName}" id="firstName" placeholder="First Name">
+
+    <label for="lastName">Last name</label>
+    <input type="text" th:field="*{lastName}" id="lastName" placeholder="Last Name">
+
+    <label for="departmentId">Department Id</label>
+    <input type="number" th:field="*{departmentId}" id="departmentId" placeholder="Department Id">
+
+    <label for="jobTitle">Job title</label>
+    <input type="text" th:field="*{jobTitle}" id="jobTitle" placeholder="Job Title">
+
+    <label for="gender">Gender</label>
+    <input type="text" th:field="*{gender}" id="gender" placeholder="Gender">
+
+    <label for="dateOfBirth">Date of Birth</label>
+    <input type="text" th:field="*{dateOfBirth}" id="dateOfBirth" placeholder="Date of Birth">
+
+    <input type="submit" value="Update Employee">
+</form>
+<p>
+    <a href="employees">Back to List</a>
+</p>
 
 </body>
 </html>
